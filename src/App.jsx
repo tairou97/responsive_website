@@ -111,7 +111,7 @@ function App() {
       </section>
 
       <section class="gallery">
-        <h2>Instant Grams</h2>
+        <h2>Inspiration</h2>
 
         <img src={mod1} alt="" />
         <img src={mod2} alt="" />

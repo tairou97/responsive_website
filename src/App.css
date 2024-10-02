@@ -272,4 +272,10 @@ img {
     .cta2 {
         background-color: #f7f7f7;
     }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
