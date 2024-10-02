@@ -110,12 +110,43 @@ img {
 }
 
 .feature {
-    background-color: #fff;
     padding: 10px;
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    font-size: 20px;
+    background-color: #000000;
+    transition: background-color 0.5s ease-in-out;
+    height: 20rem;
+    text-shadow: 0 0 20px #000;
 }
 
+.feature1 {
+    background: url(./assets/mod1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.feature2 {
+    background: url(./assets/mod10.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.feature3 {
+    background: url(./assets/mod3.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.feature4 {
+    background: url(./assets/mod6.png);
+    background-size: cover;
+    background-position: center;
+}
 
 .feature p {
     font-size: rgba(0, 0, 0, 0.5);
@@ -129,7 +160,6 @@ img {
     display: grid;
     justify-content: center;
     align-items: center;
-
 }
 
 .about__details {

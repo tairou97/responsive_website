@@ -87,37 +87,17 @@ function App() {
 
       {/* main */}
       <section class="features">
-        <div class="feature">
-          <span class="icon">🌮</span>
-          <h3>Tacos</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
-            assumenda.
-          </p>
+        <div class="feature feature1">
+          <h3>Unique Museum</h3>
         </div>
-        <div class="feature">
-          <span class="icon">🍺</span>
-          <h3>Beer</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
-            assumenda.
-          </p>
+        <div class="feature feature2">
+          <h3>Find Peace in Quality</h3>
         </div>
-        <div class="feature">
-          <span class="icon">🍷</span>
-          <h3>Wine</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
-            assumenda.
-          </p>
+        <div class="feature feature3">
+          <h3>Timeless tones</h3>
         </div>
-        <div class="feature">
-          <span class="icon">🎵</span>
-          <h3>Music</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
-            assumenda.
-          </p>
+        <div class="feature feature4">
+          <h3>What makes Life Better</h3>
         </div>
       </section>
 
@@ -132,7 +112,7 @@ function App() {
 
       <section class="gallery">
         <h2>Instant Grams</h2>
-        <p>Get a taste of what we have to offer</p>
+
         <img src={mod1} alt="" />
         <img src={mod2} alt="" />
         <img src={mod3} alt="" />
