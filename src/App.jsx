@@ -132,6 +132,7 @@ function App() {
 
       <section class="gallery">
         <h2>Instant Grams</h2>
+        <p>Get a taste of what we have to offer</p>
         <img src={mod1} alt="" />
         <img src={mod2} alt="" />
         <img src={mod3} alt="" />
