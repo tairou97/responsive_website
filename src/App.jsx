@@ -60,10 +60,10 @@ function App() {
           className={isOpen ? "menu-open" : "menu-closed"} // Apply open/closed class
         >
           <li>
-            <a href="#home">Home</a>
+            <a to="/home">Home</a>
           </li>
           <li>
-            <a href="#Premium">Premium</a>
+            <a href="/premium">Premium</a>
           </li>
           <li>
             <a href="#Sofas">Sofas</a>
