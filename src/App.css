@@ -7,6 +7,11 @@ button {
     background-color: #ffc600;
     border: 0;
     padding: 10px 20px;
+
+}
+
+.menu-button span {
+    font-size: 20px;
 }
 
 img {
@@ -214,6 +219,7 @@ img {
 @media screen and (max-width: 1024px) {
     .menu {
         order: -1;
+        perspective: 800px;
     }
 
     [aria-controls="menu-list"] {
@@ -221,33 +227,37 @@ img {
         margin-bottom: 10px;
     }
 
+
     .menu ul {
         max-height: 0;
+        overflow: hidden;
         transform: rotateX(90deg);
-        transition: all 0.5s ease-in-out;
+        transition: all 0.5s
     }
 
+    [aria-expanded="true"]~ul {
+        display: grid;
+        max-height: 1000px;
+        transform: rotateX(0deg);
+
+    }
 }
 
 @media screen and (max-width: 768px) {
     .top {
         grid-template-areas:
             "hero hero "
-            "cta1 cta2"
+            "cta1 cta2 "
+    }
+
+    .cta {
+        padding: 20px;
     }
 
     .hero {
         background: white url(./assets/img2.png);
         background-size: cover;
         background-position: center;
-    }
-
-    .cta1 {
-        background-color: #f7f7f7;
-    }
-
-    .cta2 {
-        background-color: #f7f7f7;
     }
 }
 
@@ -265,17 +275,10 @@ img {
         background-position: center;
     }
 
-    .cta1 {
-        background-color: #f7f7f7;
-    }
-
-    .cta2 {
-        background-color: #f7f7f7;
-    }
-
     .gallery {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
 
 }

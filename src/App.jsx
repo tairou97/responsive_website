@@ -10,11 +10,16 @@ import mod8 from "./assets/mod8.png";
 import mod9 from "./assets/mod9.png";
 import mod10 from "./assets/mod10.png";
 import modmitt from "./assets/modmitt.png";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div className="wrapper">
@@ -36,51 +41,44 @@ function App() {
       {/* menu */}
 
       <div className="menu">
-        <button aria-expanded="false" aria-controls="menu-list">
+        {/* Button to open/close the menu */}
+        <button
+          aria-expanded={isOpen} // Dynamically update ARIA attribute
+          aria-controls="menu-list"
+          onClick={toggleMenu} // Toggle the menu on button click
+          className="menu-button"
+        >
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-              <path
-                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3
-               32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 
-               0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 
-               416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
-              />
-            </svg>
+            {isOpen ? <FaTimes /> : <FaBars />}{" "}
+            {/* Display either bars or times icon */}
           </span>
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-              <path
-                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 
-                210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 
-              41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 
-              406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
-              />
-            </svg>
-          </span>
-          Menu
         </button>
 
-        <ul id="menu-list">
+        {/* Menu items */}
+        <ul
+          id="menu-list"
+          className={isOpen ? "menu-open" : "menu-closed"} // Apply open/closed class
+        >
           <li>
-            <a href="#">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <a href="#">Premium</a>
+            <a href="#Premium">Premium</a>
           </li>
           <li>
-            <a href="#">Sofas</a>
+            <a href="#Sofas">Sofas</a>
           </li>
           <li>
-            <a href="#">Stühle</a>
+            <a href="#Stühle">Stühle</a>
           </li>
           <li>
-            <a href="#">Tische</a>
+            <a href="#Tische">Tische</a>
           </li>
           <li>
-            <a href="#">Möbel</a>
-          </li>{" "}
+            <a href="#Möbel">Möbel</a>
+          </li>
           <li>
-            <a href="#">Deko</a>
+            <a href="#Deko">Deko</a>
           </li>
         </ul>
       </div>
@@ -112,7 +110,6 @@ function App() {
 
       <section class="gallery">
         <h2>Inspiration</h2>
-
         <img src={mod1} alt="" />
         <img src={mod2} alt="" />
         <img src={mod3} alt="" />
